@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="store">
+<html ng-app="myAppModule">
 <head>
 	<script type="text/javascript" src="javascript/simpleJS.js">
 	</script>
@@ -9,7 +9,9 @@
 	<link rel="stylesheet" href="css/simpleCSS.css">
 	<title>Hello World!</title>
 </head>
-<body>
+<body ng-controller="myController">
+	<!-- set customer delimiter for mustache -->
+	<!-- Set Delimiter tags start with an equal sign and change the tag delimiters from {{ and }} to custom strings -->
 	{{={[ ]}=}}
 
 	<h1>Hello World ffffvvv!</h1>
@@ -17,7 +19,11 @@
 		<div>
 			<p id="demo">A paragraph</p>
 			
+			<!--
 			<button class='yui3-button success' type="button" onclick="myFunction()">Try it</button>
+			-->
+			
+			<button class='yui3-button success' type="button" ng-click="changeParagraph('haha123')">Try it</button>
 		</div>
 	
 		<div>
@@ -32,7 +38,7 @@
 	</div>
 
 	<div>
-		<p>hello me</p>
+		<p>hello {{spice}}</p>
 		
 		<p>{{"hello" + " you"}}</p>
 		<p>I am {{4 + 6}}</p>
