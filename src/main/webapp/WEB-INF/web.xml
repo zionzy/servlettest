@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+	version="2.5">
+	<display-name>zy-servlet</display-name>
+	<servlet>
+		<servlet-name>zy-servlet</servlet-name>
+		<servlet-class>zy.testing.servlet.servlets.TestingServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>zy-servlet</servlet-name>
+		<url-pattern>/theservlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>SecondServlet</display-name>
+		<servlet-name>SecondServlet</servlet-name>
+		<servlet-class>zy.testing.servlet.servlets.SecondServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SecondServlet</servlet-name>
+		<url-pattern>/SecondServlet</url-pattern>
+	</servlet-mapping>
+	
+	<!-- for include javascipt, css and other web resources to servlet -->
+	<!-- http://tomcat.apache.org/tomcat-5.5-doc/default-servlet.html -->
+	<!-- The default servlet is the servlet which serves static resources as well as serves the directory listings (if directory listings are enabled). -->
+	<servlet>
+        <servlet-name>default</servlet-name>
+        <servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>
+        <init-param>
+            <param-name>debug</param-name>
+            <param-value>0</param-value>
+        </init-param>
+        <init-param>
+            <param-name>listings</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+	<!-- 
+	<servlet-mapping>
+  		<servlet-name>default</servlet-name>
+  		<url-pattern>*.css</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+  		<servlet-name>default</servlet-name>
+  		<url-pattern>*.js</url-pattern>
+	</servlet-mapping>
+	 -->	
+</web-app>

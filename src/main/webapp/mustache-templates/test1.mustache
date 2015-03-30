@@ -1,0 +1,30 @@
+<html>
+<head>
+	<script type="text/javascript" src="javascript/simpleJS.js">
+	</script>
+	<link rel="stylesheet" href="css/simpleCSS.css">
+	<title>Hello World!</title>
+</head>
+<body>
+
+	<h1>Hello World ffff!</h1>
+	<div>
+		<div>
+			<p id="demo">A paragraph</p>
+			
+			<button class='yui3-button success' type="button" onclick="myFunction()">Try it</button>
+		</div>
+	
+		<div>
+			{{#items}}
+			Name: {{name}}
+			Price: {{price}}
+			  {{#features}}
+			  Feature: {{description}}
+			  {{/features}}
+			{{/items}}
+		</div>
+	</div>
+
+</body>
+</html>
