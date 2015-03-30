@@ -42,13 +42,13 @@ public class SecondServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         PrintWriter pw = response.getWriter();
-        pw.println("Welcome haha!");
+        //pw.println("Welcome haha!");
 
         List<Items.Item> items = new Items().items();
         try (
             BufferedReader buffR =
                 new BufferedReader(new FileReader(new File(new URI(
-                    "file:///Users/zion/zy-testing/src/main/webapp/mustache-templates/test1.mustache"))))) {
+                    "file:///Users/zion/zytests/servlettest/src/main/webapp/mustache-templates/test1.mustache"))))) {
 
             Map<String, Object> data = new HashMap<>();
 

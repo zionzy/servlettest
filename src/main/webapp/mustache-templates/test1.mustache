@@ -1,13 +1,18 @@
-<html>
+<!DOCTYPE html>
+<html ng-app="store">
 <head>
 	<script type="text/javascript" src="javascript/simpleJS.js">
 	</script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script type="text/javascript" src="javascript/app.js"></script>
+
 	<link rel="stylesheet" href="css/simpleCSS.css">
 	<title>Hello World!</title>
 </head>
 <body>
+	{{={[ ]}=}}
 
-	<h1>Hello World ffff!</h1>
+	<h1>Hello World ffffvvv!</h1>
 	<div>
 		<div>
 			<p id="demo">A paragraph</p>
@@ -16,14 +21,21 @@
 		</div>
 	
 		<div>
-			{{#items}}
-			Name: {{name}}
-			Price: {{price}}
-			  {{#features}}
-			  Feature: {{description}}
-			  {{/features}}
-			{{/items}}
+			{[#items]}
+			Name: {[name]}
+			Price: {[price]}
+			  {[#features]}
+			  Feature: {[description]}
+			  {[/features]}
+			{[/items]}
 		</div>
+	</div>
+
+	<div>
+		<p>hello me</p>
+		
+		<p>{{"hello" + " you"}}</p>
+		<p>I am {{4 + 6}}</p>
 	</div>
 
 </body>
