@@ -1,0 +1,22 @@
+{
+  "name": "servlettest",
+  "version": "0.0.0",
+  "homepage": "https://github.com/zionzy/servlettest",
+  "authors": [
+    "Zion <zyuan@ziji-media.com>"
+  ],
+  "description": "servlet test bower",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.15",
+    "bootstrap-css": "~3.2.0",
+    "jquery": "~2.1.3"
+  }
+}
