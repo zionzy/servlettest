@@ -5,7 +5,7 @@
 		
 		$scope.changeParagraph = function(test) {
 			
-			document.getElementById("demo").innerHTML = "Paragraph changed.";
+			//document.getElementById("demo").innerHTML = "Paragraph changed.";
 			
 			$scope.spice = test;
 		};
